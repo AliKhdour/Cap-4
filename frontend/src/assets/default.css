@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');
+ 
+
+
+
+
+
+*{
+   font-family: 'Archivo', sans-serif;
+}
+
+:root {
+    --main-bg-color: rgba(0, 0, 0, 0.5);
+    --form-bg-color: rgba(0, 0, 0, 0.8);
+    --head-bg-color: rgba(255,255,255,.8);
+    --form-bg-color-app: rgba(255,255,255,.5);
+
+    --profile-bg-color: repeating-linear-gradient(45deg, rgba(40,40,40, .1) 10%, rgba(255,0,0,.2) 70%),
+    repeating-linear-gradient(-45deg, rgba(255,40,40,.1) 20%, rgba(255,0,0,.1) 35%, rgba(255,0,0,.2) 40%),
+    repeating-linear-gradient(30deg, rgba(255,40,40,.3) 5%, rgba(255,0,0,.2) 40%, rgba(255,0,0,.6) 60%, rgba(255,0,0,.1) 90%),
+    repeating-linear-gradient(-45deg, rgba(255,40,40,.2) 10%, rgba(255,0, 0,.1) 20%) , 
+    radial-gradient(ellipse at top, rgba(150, 0, 0, .9), transparent),
+    radial-gradient(ellipse at bottom right, rgba(0,0,0,.9) 30%, rgba(0,0,0, .9) 60%, transparent);
+
+
+    --maint-bg-alert: red;
+    --maint-bg-color: rgba( 250,250,250,0.9);
+    --maint-bg-risk: orange;
+
+    --std-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.459);
+
+    --btn-inset-shadow: inset 0px 34px 3px -15px rgba(255, 255, 255, 0.24);
+    --btn-sbmt-color: #44c767;
+    --btn-sbmt-hover-color: #5cbf2a;
+    --btn-regis-color: #c74545;
+    --btn-regis-hover-color: #c20000;
+
+    --btn-txt-shadow-clr: 0 2px 5px #00000057;
+    --btn-radius: 15px;
+
+    --txt-prm-color:white;
+    --txt-sec-color:white;
+    --txt-form-color: black;
+    --txt-inpt-color: black;
+    --icon-color: black;
+
+    --txt-font-size: 1.25rem;
+}
+
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+  }
+
+input::placeholder {
+    font-size: var(--txt-font-size);
+    text-align: center;
+  }
+
+label, input {
+    margin:10px;
+    color: var(--txt-inpt-color);
+  }
+
+input {
+    height: 40px;
+    border-radius:5px;
+    font-size: 20px;
+}
+
+
+form {
+    min-width: 350px;
+    max-width: 600px;
+    padding:20px;
+    width:60vw;
+    height:400px;
+    display:flex;
+    flex-direction: column;
+    background-color: var(--form-bg-color);
+    color: var(--txt-prm-color);
+    z-index: 2;
+}
+
+
+
+form>div a, button {
+    box-shadow: var(--btn-inset-shadow);
+    background-color: var(--btn-sbmt-color);
+    border-radius:var(--btn-radius);
+    border: none;
+    display:inline-block;
+    cursor:pointer;
+    color: var(--txt-prm-color);
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    width: 80%;
+    height:60px;
+    line-height: 50px;
+    text-decoration: none;
+    text-shadow: var(--btn-txt-shadow-clr);
+    margin: 0 auto;
+}
+
+form>div a, button:hover {
+    background-color:var(--btn-sbmt-hover-color);
+}
+
+form>div a, button:active {
+	  position:relative;
+    top:2px;
+    transition-timing-function: ease;
+    
+}
+
+.nav-logo { 
+  position: relative;
+  margin-top: 0;
+  margin-left: 10px;
+  display: inline-block;
+  width: 150px;
+  height: auto;
+}
